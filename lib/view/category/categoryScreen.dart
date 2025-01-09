@@ -22,12 +22,11 @@ class CategoryScreen extends StatelessWidget {
         child: GridView.builder(
           shrinkWrap: true,
           itemCount: 8,
-
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             mainAxisSpacing: 8,
             crossAxisSpacing: 8,
-            mainAxisExtent: 200,
+            mainAxisExtent: 180,
           ),
           itemBuilder: (context, index) {
             return Container(
@@ -39,21 +38,27 @@ class CategoryScreen extends StatelessWidget {
                     color: Colors.black.withOpacity(0.1),
                     spreadRadius: 2,
                     blurRadius: 5,
-                    offset: Offset(0, 3), // changes position of shadow
+                    offset: const Offset(0, 3), // changes position of shadow
                   ),
                 ],
               ),
               child: Column(
                 children: [
                   10.heightBox,
-                  Image.asset(
-                    categoryImages[index],
-                    height: 120,
-                    width: 120,
-                    fit: BoxFit.cover,
+                  Center(
+                    child: Image.asset(
+                      categoryImages[index],
+                      height: 120,
+                      width: 120,
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                  const SizedBox(height: 20),
-                  categoryList[index].text.color(darkFontGrey).align(TextAlign.center).make(),
+                  const SizedBox(height: 10),
+                  categoryList[index]
+                      .text
+                      .color(darkFontGrey)
+                      .align(TextAlign.center)
+                      .make(),
                 ],
               ),
             ).onTap(() {

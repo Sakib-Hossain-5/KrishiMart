@@ -132,7 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                             ),
                             5.heightBox,
-                            Text("Privacy policy"),
+                            const Text("Privacy policy"),
                             10.heightBox,
                             // Add Skip button here
                             ourButton(
@@ -140,7 +140,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               title: 'Skip',
                               textColor: whiteColor,
                               onPress: () {
-                                Get.to(() => Home());
+                                Get.to(() => const Home());
                               },
                             ).box.width(context.screenWidth - 50).make(),
                           ],

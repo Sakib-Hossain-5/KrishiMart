@@ -7,7 +7,7 @@ import 'package:krishimart/view/home_screen/home_screen.dart';
 import 'package:krishimart/view/profile/profile.dart';
 
 class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,10 +25,10 @@ class Home extends StatelessWidget {
     ];
 
     var navBody = [
-      HomeScreen(),
-      CategoryScreen(),
-      Cart(),
-      Profile()
+      const HomeScreen(),
+      const CategoryScreen(),
+      const Cart(),
+      const Profile()
     ];
 
     return Scaffold(

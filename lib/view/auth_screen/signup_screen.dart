@@ -32,9 +32,9 @@ class _SignupScreenState extends State<SignupScreen> {
           child: Center(
             child: Column(
               children: [
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 applogoWidget(),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Text(
                   "Log in to $appname",
                   style: TextStyle(
@@ -43,7 +43,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     fontSize: 18,
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Card(
                   color: Colors.white,
                   elevation: 8.0,
@@ -108,19 +108,19 @@ class _SignupScreenState extends State<SignupScreen> {
                                 },
                               ),
 
-                              SizedBox(height: 5),
+                              const SizedBox(height: 5),
                               ourButton(
                                 color: Colors.green[900]!,
                                 title: signup,
                                 textColor: greenColor,
                                 onPress: () {
-                                  Get.to(() => LoginScreen());
+                                  Get.to(() => const LoginScreen());
                                   // Handle sign-up action
                                 },
                               ).box.width(context.screenWidth - 50).make(),
-                              SizedBox(height: 10),
-                              Text(loginWith),
-                              SizedBox(height: 5),
+                              const SizedBox(height: 10),
+                              const Text(loginWith),
+                              const SizedBox(height: 5),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: List.generate(
@@ -138,15 +138,15 @@ class _SignupScreenState extends State<SignupScreen> {
                                   ),
                                 ),
                               ),
-                              SizedBox(height: 5),
-                              Text("Privacy policy"),
-                              SizedBox(height: 10),
+                              const SizedBox(height: 5),
+                              const Text("Privacy policy"),
+                              const SizedBox(height: 10),
                               ourButton(
                                 color: Colors.blueGrey,
                                 title: 'Skip',
                                 textColor: whiteColor,
                                 onPress: () {
-                                  Get.to(() => Home());
+                                  Get.to(() => const Home());
                                 },
                               ).box.width(context.screenWidth - 50).make(),
                             ],

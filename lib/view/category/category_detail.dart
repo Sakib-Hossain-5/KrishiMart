@@ -6,7 +6,7 @@ import 'item_details.dart'; // Assuming this contains the necessary imports like
 class CategoryDetails extends StatelessWidget {
   final String? title;
 
-  const CategoryDetails({Key? key, required this.title}) : super(key: key);
+  const CategoryDetails({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -108,7 +108,7 @@ class ProductCard extends StatelessWidget {
         .roundedSM
         .padding(const EdgeInsets.all(12))
         .make().onTap((){
-          Get.to(()=>ItemDetails(title: "Dummy Item"));
+          Get.to(()=>const ItemDetails(title: "Dummy Item"));
     });
   }
 }

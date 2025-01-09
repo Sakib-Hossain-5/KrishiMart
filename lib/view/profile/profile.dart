@@ -9,7 +9,7 @@ class Profile extends StatelessWidget {
       backgroundColor: Colors.white, // Set scaffold background color to white
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(8),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -24,7 +24,7 @@ class Profile extends StatelessWidget {
                 children: [
                   Image.asset(imgProfile2, width: 100, fit: BoxFit.cover)
                       .box.roundedFull.clip(Clip.antiAlias).make(),
-                  SizedBox(width: 10), // Add space between image and details
+                  const SizedBox(width: 10), // Add space between image and details
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,7 +44,7 @@ class Profile extends StatelessWidget {
                 ],
               ),
 
-              SizedBox(height: 30), // Add space between elements
+              const SizedBox(height: 30), // Add space between elements
               // Cards row
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -56,7 +56,7 @@ class Profile extends StatelessWidget {
                       5.heightBox,
                       "Wishlist".text.color(darkFontGrey).make(),
                     ],
-                  ).box.white.rounded.width(context.screenWidth / 3.4).height(80).padding(EdgeInsets.all(4)).shadowSm.make(), // Add card shadow
+                  ).box.white.rounded.width(context.screenWidth / 3.4).height(80).padding(const EdgeInsets.all(4)).shadowSm.make(), // Add card shadow
                   // Orders
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -65,7 +65,7 @@ class Profile extends StatelessWidget {
                       5.heightBox,
                       "Orders".text.color(darkFontGrey).make(),
                     ],
-                  ).box.white.rounded.width(context.screenWidth / 3.4).height(80).padding(EdgeInsets.all(4)).shadowSm.make(), // Add card shadow
+                  ).box.white.rounded.width(context.screenWidth / 3.4).height(80).padding(const EdgeInsets.all(4)).shadowSm.make(), // Add card shadow
                   // In Your Cart
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -74,13 +74,13 @@ class Profile extends StatelessWidget {
                       5.heightBox,
                       "In Your Cart".text.color(darkFontGrey).make(),
                     ],
-                  ).box.white.rounded.width(context.screenWidth / 3.4).height(80).padding(EdgeInsets.all(4)).shadowSm.make(), // Add card shadow
+                  ).box.white.rounded.width(context.screenWidth / 3.4).height(80).padding(const EdgeInsets.all(4)).shadowSm.make(), // Add card shadow
                 ],
               ),
-              SizedBox(height: 20), // Add space between elements
+              const SizedBox(height: 20), // Add space between elements
               // Additional card with list
               Container(
-                padding: EdgeInsets.all(8),
+                padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(12),
@@ -89,11 +89,11 @@ class Profile extends StatelessWidget {
                       color: Colors.grey.withOpacity(0.3),
                       spreadRadius: 3,
                       blurRadius: 5,
-                      offset: Offset(0, 3),
+                      offset: const Offset(0, 3),
                     ),
                   ],
                 ),
-                child: Column(
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     ListTile(

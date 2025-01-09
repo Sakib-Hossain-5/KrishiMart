@@ -4,7 +4,7 @@ import '../../consts/list.dart';
 import 'featured_button.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -132,7 +132,7 @@ class HomeScreen extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Image.asset(
-                                    imgSlider3,
+                                    imgP2,
                                     width: 150,
                                     fit: BoxFit.cover,
                                   ),
@@ -141,7 +141,7 @@ class HomeScreen extends StatelessWidget {
                                   10.heightBox,
                                   "Tk 600".text.color(Colors.green).fontFamily(bold).size(16).make(),
                                 ],
-                              ).box.white.margin(EdgeInsets.symmetric(horizontal:4)).roundedSM.padding(const EdgeInsets.all(8)).make(), // Fixed this line
+                              ).box.white.margin(const EdgeInsets.symmetric(horizontal:4)).roundedSM.padding(const EdgeInsets.all(8)).make(), // Fixed this line
                             ),
                           ),
                         )
