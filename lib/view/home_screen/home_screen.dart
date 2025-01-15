@@ -1,6 +1,7 @@
 import 'package:krishimart/consts/consts.dart';
 import 'package:krishimart/view/widget/homeButton.dart';
 import '../../consts/list.dart';
+import '../weather/weather_card.dart';
 import 'featured_button.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -8,6 +9,14 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    WeatherInfo sampleWeather = WeatherInfo(
+      location: 'Dhaka',
+      temperature: 25.5,
+      humidity: 50,
+      forecast: "No possibility of rain in 5 days",
+      description: 'Sunny',
+      iconName: 'sunny',
+    );
     return Container(
       padding: const EdgeInsets.all(12),
       color: lightGrey,
@@ -33,7 +42,7 @@ class HomeScreen extends StatelessWidget {
               ),
               // SingleChildScrollView// Row
               10.heightBox,
-              Column(
+              /*Column(
                 children: [
                   VxSwiper.builder(
                     aspectRatio: 16 / 9,
@@ -47,7 +56,10 @@ class HomeScreen extends StatelessWidget {
                         fit: BoxFit.fill,
                       ).box.rounded.clip(Clip.antiAlias).margin(const EdgeInsets.symmetric(horizontal: 8)).make();
                     },
-                  ),
+                  ),*/
+
+                   WeatherCard(weather: sampleWeather),
+
                   10.heightBox,
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -194,10 +206,10 @@ class HomeScreen extends StatelessWidget {
                   )
                 ],
               ),
-            ],
+
           ),
         ),
-      ),
-    );
+      );
+
   }
 }
