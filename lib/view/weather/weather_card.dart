@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 class WeatherCard extends StatelessWidget {
   final WeatherInfo weather;
 
-  const WeatherCard({Key? key, required this.weather}) : super(key: key);
+  const WeatherCard({super.key, required this.weather});
 
   @override
   Widget build(BuildContext context) {
     return Card(
       elevation: 1,
-      margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      margin: const EdgeInsets.symmetric(horizontal: 10.5, vertical: 8),
       color: Colors.green.shade100, // Soft green background color for the card
       child: Container(
         height: 150, // Adjust the height as necessary

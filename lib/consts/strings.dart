@@ -42,7 +42,7 @@ const searchAnything = "Search agricultural products...",
 
 //categories screen
 const
-    Seeds = "Crop Seeds and Seedlings",
+    seeds = "Crop Seeds and Seedlings",
     farmingEquipment = "Farming Equipment & Tools",
     irrigation = "Irrigation Systems",
     fertilizersPesticides = "Fertilizers & Pesticides",

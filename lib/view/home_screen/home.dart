@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:krishimart/consts/consts.dart';
 import 'package:krishimart/controller/homecontroller.dart';
 import 'package:krishimart/view/cart/cart.dart';
-import 'package:krishimart/view/category/categoryScreen.dart';
+import 'package:krishimart/view/category/category_screen.dart';
 import 'package:krishimart/view/home_screen/home_screen.dart';
 import 'package:krishimart/view/profile/profile.dart';
 

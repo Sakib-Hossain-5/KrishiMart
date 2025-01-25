@@ -40,23 +40,22 @@ dependencies:
   get: ^4.6.6
 
   #velocityx
-  velocity_x: ^4.2.1
+  velocity_x: 4.2.0
+  supabase_flutter: ^2.8.3
+  flutter_dotenv: ^5.2.1
+  flutter_launcher_icons: ^0.14.3
+  path_provider: ^2.1.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_launcher_icons: "^0.14.2"
-
-flutter_launcher_icons:
-  android: true
-  image_path: "assets/icons/app_logo.png"
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^4.0.0
+  flutter_lints: ^5.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -77,6 +76,11 @@ flutter:
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
+
+flutter_launcher_icons:
+  android: true # Generate Android icon
+
+  image_path: "assets/icons/sunny.jpg"
 
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/to/asset-from-package

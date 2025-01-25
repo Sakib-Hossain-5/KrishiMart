@@ -2,10 +2,10 @@ import 'package:get/get.dart';
 import 'package:krishimart/consts/consts.dart';
 import 'package:krishimart/view/widget/applogo_widget.dart';
 import 'package:krishimart/view/widget/custom_textfield.dart';
-import 'package:krishimart/view/widget/ourButton.dart';
+import 'package:krishimart/view/widget/ourbutton.dart';
 import '../../consts/list.dart';
+import '../../controller/auth_controller.dart';
 import '../home_screen/home.dart';
-import 'login_screen.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -16,10 +16,12 @@ class SignupScreen extends StatefulWidget {
 
 class _SignupScreenState extends State<SignupScreen> {
   // Controllers for text fields
+  final AuthController authController = Get.put(AuthController());
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  final TextEditingController retypePasswordController = TextEditingController();
+  final TextEditingController retypePasswordController =
+      TextEditingController();
   // Form Key for validation
   final _formKey = GlobalKey<FormState>();
 
@@ -107,15 +109,19 @@ class _SignupScreenState extends State<SignupScreen> {
                                   return null;
                                 },
                               ),
-
                               const SizedBox(height: 5),
                               ourButton(
                                 color: Colors.green[900]!,
                                 title: signup,
                                 textColor: greenColor,
                                 onPress: () {
-                                  Get.to(() => const LoginScreen());
-                                  // Handle sign-up action
+                                  if (_formKey.currentState!.validate()) {
+                                    authController.signUp(
+                                      email: emailController.text,
+                                      password: passwordController.text,
+                                      name: nameController.text,
+                                    );
+                                  }
                                 },
                               ).box.width(context.screenWidth - 50).make(),
                               const SizedBox(height: 10),
@@ -125,7 +131,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: List.generate(
                                   3,
-                                      (index) => Padding(
+                                  (index) => Padding(
                                     padding: const EdgeInsets.all(8.0),
                                     child: CircleAvatar(
                                       backgroundColor: lightGrey,
@@ -154,7 +160,13 @@ class _SignupScreenState extends State<SignupScreen> {
                         ),
                       ],
                     ),
-                  ).box.white.rounded.padding(const EdgeInsets.all(16)).width(context.screenWidth - 50).make(),
+                  )
+                      .box
+                      .white
+                      .rounded
+                      .padding(const EdgeInsets.all(16))
+                      .width(context.screenWidth - 50)
+                      .make(),
                 ),
               ],
             ),
